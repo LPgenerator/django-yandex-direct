@@ -1,8 +1,8 @@
 Django-Yandex-Direct
 ====================
 
-Quick installation
-------------------
+Installation and usage
+----------------------
 1. Using pip:
 
 .. code-block:: bash
