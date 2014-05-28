@@ -25,4 +25,8 @@ Quick installation
     from yandex_direct import api
     from pprint import pprint
 
+    # Pythonic style
     pprint(api.get_regions().get('data'))
+
+    # Native API style
+    pprint(api.PingAPI().get('data'))
