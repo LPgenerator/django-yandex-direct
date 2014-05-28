@@ -46,8 +46,8 @@ class Api(object):
         self.method = ''.join(
             map(lambda s: s[0].upper() + s[1:], m.split('_')))
 
-    def __set_params(self, params):
-        request_data = {'method': self.method, 'param': params}
+    def __set_params(self, args, params=None):
+        request_data = {'method': self.method, 'param': params or args}
         request_data.update(self.credentials)
         self.params = simplejson.dumps(
             request_data, ensure_ascii=False).encode('utf8')
@@ -69,10 +69,10 @@ class Api(object):
         return defaults.AUTH_URL % self.credentials
 
     def __getattr__(self, method):
-        def request_api(**params):
+        def request_api(*args, **kwargs):
             self.__set_root()
             self.__set_method(method)
-            self.__set_params(params)
+            self.__set_params(args, kwargs)
             return self.__do_request()
 
         return request_api
