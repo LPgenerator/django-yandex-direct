@@ -14,7 +14,7 @@ LOCALE = get_settings("YANDEX_DIRECT_LOCALE", 'ru')
 SANDBOX = get_settings("YANDEX_DIRECT_SANDBOX", False)
 SANDBOX_URL = get_settings(
     "YANDEX_DIRECT_SANDBOX_URL",
-    "https://api-sandbox.direct.yandex.ru/json-api/v4/")
+    "https://api-sandbox.direct.yandex.ru/live/v4/json/")
 PROD_URL = get_settings(
     "YANDEX_DIRECT_PROD_URL",
     "https://api.direct.yandex.ru/live/v4/json/")
