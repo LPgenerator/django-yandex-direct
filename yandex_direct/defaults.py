@@ -17,6 +17,6 @@ SANDBOX_URL = get_settings(
     "https://api-sandbox.direct.yandex.ru/json-api/v4/")
 PROD_URL = get_settings(
     "YANDEX_DIRECT_PROD_URL",
-    "https://api.direct.yandex.ru/v4/json/")
+    "https://api.direct.yandex.ru/live/v4/json/")
 AUTH_URL = '"https://oauth.yandex.ru/authorize?response_type=code&' \
            'client_id=%(application_id)s&state="'
